@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -19,12 +18,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.HorizontalAlignmentLine
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.meteoapp.R
+import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 
 @Composable
 fun Middle(
@@ -42,13 +42,13 @@ fun Middle(
                    // .background(Color.Cyan)
                     .fillMaxWidth()
                     .weight(0.3f)
-
             ) {
                 Text(
                     modifier = modifier
                         .padding(top = 5.dp),
-                    text = "Date",
-                    style = TextStyle(fontSize = 28.sp)
+                    text = "04/05/2024 14:01 Lyon",
+                    style = TextStyle(fontSize = 28.sp),
+                    color = Color.White,
                 )
             }
             Spacer(Modifier.weight(0.35f))
@@ -60,23 +60,27 @@ fun Middle(
                     .fillMaxWidth()
                     .weight(2f)
             ) {
-                Column(
+                Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center,
                     modifier = modifier
-                      //  .background(Color.Gray)
+                       .background(Color.Gray)
                         .width(200.dp)
                 ) {
                     Text(
-                        text = "https://api.openweathermap.org/data/3.0/onecall/day_summary?current.temp={lat}&appid={27eecac1c8db4978855d8a6efda65f5e}",
-                        style = TextStyle(fontSize = 90.sp)
+                        text = "26°",
+                        style = TextStyle(fontSize = 90.sp),
+                        color = Color.White,
                     )
                     Text(
                         text = "Ressenti",
-                        style = TextStyle(fontSize = 20.sp)
+                        style = TextStyle(fontSize = 20.sp),
+                        color = Color.White,
+                        modifier = modifier.padding(start = 1.dp)
+
                     )
                 }
                 Column(
                     modifier = modifier
-                       // .background(Color.Yellow)
+                        .background(Color.Yellow)
                 ) {
                     Image(
                         painter = painterResource(id = R.drawable.image2),
@@ -91,77 +95,12 @@ fun Middle(
             }
             //--------------------------------------
             Row( horizontalArrangement = Arrangement.SpaceBetween,
-
                 modifier = modifier
-                    .background(Color.Green)
+                   // .background(Color.Green)
                     .fillMaxWidth()
                     .weight(1F)
             ) {
-                Column (horizontalAlignment = Alignment.CenterHorizontally) {
-                    Image(
-                        painter = painterResource(id = R.drawable.icone),
-                        contentDescription = null,
-                        modifier = Modifier
-                            .size(70.dp)
-                            .clip(CircleShape)
-                    )
-                    Text(
-                        text = "Visibility",
-                        style = TextStyle(fontSize = 20.sp)
-                    )
-                }
-                Column (horizontalAlignment = Alignment.CenterHorizontally) {
-                    Image(
-                        painter = painterResource(id = R.drawable.icone),
-                        contentDescription = null,
-                        modifier = Modifier
-                            .size(70.dp)
-                            .clip(CircleShape)
-                    )
-                    Text(
-                        text = "wind",
-                        style = TextStyle(fontSize = 20.sp)
-                    )
-                }
-                Column (horizontalAlignment = Alignment.CenterHorizontally){
-                    Image(
-                        painter = painterResource(id = R.drawable.icone),
-                        contentDescription = null,
-                        modifier = Modifier
-                            .size(70.dp)
-                            .clip(CircleShape)
-                    )
-                    Text(
-                        text = "UV",
-                        style = TextStyle(fontSize = 20.sp)
-                    )
-                }
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Image(
-                        painter = painterResource(id = R.drawable.icone),
-                        contentDescription = null,
-                        modifier = Modifier
-                            .size(70.dp)
-                            .clip(CircleShape)
-                    )
-                    Text(
-                        text = "Pression",
-                        style = TextStyle(fontSize = 20.sp)
-                    )
-                }
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Image(
-                        painter = painterResource(id = R.drawable.icone),
-                        contentDescription = null,
-                        modifier = Modifier
-                            .size(70.dp)
-                            .clip(CircleShape)
-                    )
-                    Text(
-                        text = "Humidité",
-                        style = TextStyle(fontSize = 20.sp)
-                    )
-                }
+                ItemList()
 
             }
             //---------------------------------------
@@ -197,7 +136,8 @@ fun Middle(
                     )
                     Text(
                         text = "Couché",
-                        style = TextStyle(fontSize = 20.sp)
+                        style = TextStyle(fontSize = 20.sp),
+                        color = Color.White,
                     )
                 }
 

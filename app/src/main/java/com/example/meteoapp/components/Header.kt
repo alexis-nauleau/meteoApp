@@ -40,7 +40,7 @@ fun Header() {
                 Icons.Outlined.LocationOn,
                 contentDescription = "localisation",
                 modifier = Modifier.size(50.dp),
-                tint = Color.Black
+                tint = Color.White
             )
             TextField(
                 value = text.value,
@@ -61,7 +61,7 @@ fun Header() {
             contentDescription = "partager",
             modifier = Modifier.size(50.dp).padding(start = 15.dp
             ),
-            tint = Color.Black,
+            tint = Color.White,
 
             )
         }

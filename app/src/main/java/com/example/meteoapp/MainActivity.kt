@@ -29,7 +29,8 @@ class MainActivity : ComponentActivity() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Box(
                         Modifier
-                            .background(Color(0xFF72ABBE))
+
+                            .background(Color(0xFF174B77))
                             .fillMaxSize()
                             .padding(innerPadding)
 
@@ -37,7 +38,8 @@ class MainActivity : ComponentActivity() {
                         // .paint(painterResource(id = R.drawable.image3),contentScale = ContentScale.FillHeight)
 
                     ) {
-                        Column {
+                        Column  {
+
                             Row(
                                 Modifier
                                     .weight(1f)
@@ -51,10 +53,10 @@ class MainActivity : ComponentActivity() {
                             ) {
                                 Menu()
                             }
-                             Spacer(Modifier.weight(0.55f))
+                            Spacer(Modifier.weight(0.1f))
                             Box(
                                 Modifier
-                                    .background(Color(0xFF1B7FA0))
+                                    .background(color = Color.White.copy(alpha = 0.05f))
                                     .fillMaxWidth()
                                     .weight(7f)
 
