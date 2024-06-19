@@ -19,7 +19,7 @@ fun Menu() {
         verticalAlignment = Alignment.Bottom,
 
         modifier = Modifier
-            .background(color = Color.Red)
+            //.background(color = Color.Red)
             .fillMaxHeight()
             .fillMaxSize()
             .padding(horizontal = 10.dp)

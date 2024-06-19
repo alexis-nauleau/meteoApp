@@ -8,6 +8,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -50,7 +51,7 @@ class MainActivity : ComponentActivity() {
                             ) {
                                 Menu()
                             }
-                            // Spacer(Modifier.weight(1.25f))
+                             Spacer(Modifier.weight(0.55f))
                             Box(
                                 Modifier
                                     .background(Color(0xFF1B7FA0))
@@ -58,14 +59,15 @@ class MainActivity : ComponentActivity() {
                                     .weight(7f)
 
                             ) {
+
                                 Middle()
                             }
                             //Spacer(Modifier.weight(2.25f))
-                            Box(
-                                Modifier
-                                    .fillMaxWidth()
-                                    .weight(2f)
-                            )
+                          //  Box(
+                               // Modifier
+                                   // .fillMaxWidth()
+                                  //  .weight(2f)
+                          //  )
                         }
                     }
                 }

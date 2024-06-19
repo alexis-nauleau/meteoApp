@@ -35,14 +35,7 @@ fun Header() {
             //.background(color = Color.Blue)
     ) {
         Row {
-            Icon(
-                Icons.Outlined.Share,
-                contentDescription = "partager",
-                modifier = Modifier.size(50.dp).padding(start = 15.dp
-                ),
-                tint = Color.Black,
 
-            )
             Icon(
                 Icons.Outlined.LocationOn,
                 contentDescription = "localisation",
@@ -62,6 +55,14 @@ fun Header() {
                     .border(width = 1.dp, color = Color.Transparent)
                     .weight(5f)
                     .clip(RoundedCornerShape(100))
+            )
+            Icon(
+                    Icons.Outlined.Share,
+            contentDescription = "partager",
+            modifier = Modifier.size(50.dp).padding(start = 15.dp
+            ),
+            tint = Color.Black,
+
             )
         }
 
