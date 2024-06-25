@@ -29,8 +29,8 @@ fun ItemList(){
         )
         Text(
             text = "Visibility",
-            style = TextStyle(fontSize = 20.sp),
-            color = Color.White,
+            style = TextStyle(fontSize = 20.sp, color = Color.White),
+
 
         )
     }
@@ -44,7 +44,7 @@ fun ItemList(){
         )
         Text(
             text = "wind",
-            style = TextStyle(fontSize = 20.sp)
+            style = TextStyle(fontSize = 20.sp, color = Color.White),
 
         )
     }
@@ -58,7 +58,7 @@ fun ItemList(){
         )
         Text(
             text = "UV",
-            style = TextStyle(fontSize = 20.sp)
+            style = TextStyle(fontSize = 20.sp, color = Color.White),
         )
     }
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -71,7 +71,7 @@ fun ItemList(){
         )
         Text(
             text = "Pression",
-            style = TextStyle(fontSize = 20.sp)
+            style = TextStyle(fontSize = 20.sp, color = Color.White),
         )
     }
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -84,7 +84,7 @@ fun ItemList(){
         )
         Text(
             text = "Humidité",
-            style = TextStyle(fontSize = 20.sp)
+            style = TextStyle(fontSize = 20.sp, color = Color.White),
         )
     }
 }
